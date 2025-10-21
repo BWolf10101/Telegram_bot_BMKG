@@ -95,4 +95,4 @@ php artisan serve
 
 ## 👤 Author
 
-[Ridit Akbar]
+[Raidit Akbar]
