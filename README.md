@@ -1,66 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Bot Telegram Cuaca Pekanbaru
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bot yang dapat mengambil data hasil analysis perkiraan cuaca di BMKG melalui API, bot yang dapat di gunakan melalui aplikasi/app telegram untuk bertanya mengenai cuaca dini hari hingga prediksi cuaca 3 hari dan 7 hari.
 
-## About Laravel
+Bot yang di rancang melalui program python dan menggunakan framework php yang di gunakan untuk mengelola backend.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📋 Dependensi dan Library
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Core Dependencies
+Berikut adalah library utama yang perlu di install untuk menjalankan python:
 
-## Learning Laravel
+```
+python-telegram-bot==20.7
+requests==2.31.0
+aiohttp==3.9.1
+python-dotenv==1.0.0
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Dependencies dari python-telegram-bot
+```
+anyio==4.1.0
+certifi==2023.11.17
+charset-normalizer==3.3.2
+frozenlist==1.4.0
+h11==0.14.0
+httpcore==1.0.2
+httpx==0.25.2
+idna==3.6
+multidict==6.0.4
+sniffio==1.3.0
+urllib3==2.1.0
+yarl==1.9.4
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Timezone
+```
+pytz==2023.3
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Cara Menjalankan dan Uji Coba
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Menjalankan Bot Python
+Masuk ke folder `python-bot` dan jalankan di bash:
 
-### Premium Partners
+```bash
+python run.py
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Menjalankan Backend PHP
+Pada bash ke dua, jalankan:
 
-## Contributing
+```bash
+php artisan migration
+php artisan serve
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📦 Instalasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Clone repository ini
+2. Install dependencies Python:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Install dependencies PHP (Laravel):
+   ```bash
+   composer install
+   ```
+4. Setup file `.env` untuk konfigurasi bot dan database
+5. Jalankan migrasi database dan start service sesuai panduan di atas
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🌤️ Fitur
 
-## License
+- ☀️ Cuaca dini hari
+- 📅 Prediksi cuaca 3 hari
+- 📆 Prediksi cuaca 7 hari
+- 🔄 Data real-time dari API BMKG
+- 📱 Akses mudah melalui Telegram
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🛠️ Teknologi
+
+- **Bot**: Python 3.x dengan python-telegram-bot
+- **Backend**: PHP dengan Laravel Framework
+- **API**: BMKG Weather API
+- **Database**: MySQL
+
+## 👤 Author
+
+[Ridit Akbar]
