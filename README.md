@@ -2,7 +2,7 @@
 
 Bot yang dapat mengambil data hasil analysis perkiraan cuaca di BMKG melalui API, bot yang dapat di gunakan melalui aplikasi/app telegram untuk bertanya mengenai cuaca dini hari hingga prediksi cuaca 3 hari dan 7 hari.
 
-Bot yang di rancang melalui program python dan menggunakan framework php yang di gunakan untuk mengelola backend.
+Bot yang di rancang melalui program python dan menggunakan framework Laravel yang di gunakan untuk mengelola backend.
 
 ---
 
