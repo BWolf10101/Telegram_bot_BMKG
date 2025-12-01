@@ -41,38 +41,6 @@ pytz==2023.3
 
 ---
 
-## 🚀 Cara Menjalankan dan Uji Coba
-
-### Menjalankan Bot Python
-Masuk ke folder `python-bot` dan jalankan di bash:
-
-```bash
-python run.py
-```
-
-### Menjalankan Backend PHP
-Pada bash ke dua, jalankan:
-
-```bash
-php artisan migration
-php artisan serve
-```
-
----
-
-## 📦 Instalasi
-
-1. Clone repository ini
-2. Install dependencies Python:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Install dependencies PHP (Laravel):
-   ```bash
-   composer install
-   ```
-4. Setup file `.env` untuk konfigurasi bot dan database
-5. Jalankan migrasi database dan start service sesuai panduan di atas
 
 ---
 
@@ -92,7 +60,3 @@ php artisan serve
 - **Backend**: PHP dengan Laravel Framework
 - **API**: BMKG Weather API
 - **Database**: MySQL
-
-## 👤 Author
-
-[Raidit Akbar]
